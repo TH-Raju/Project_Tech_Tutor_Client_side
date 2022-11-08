@@ -1,4 +1,5 @@
 import Blog from "../components/Blog";
+import ErrorPage from "../components/ErrorPage";
 import Home from "../components/Home/Home";
 import Main from "../layout/Main";
 
@@ -28,6 +29,11 @@ export const router = createBrowserRouter([
 
             }
         ]
+    },
+    {
+        path: '*',
+        element: <ErrorPage></ErrorPage>
     }
+
 
 ])
