@@ -28,11 +28,12 @@ const Register = () => {
         const password = form.password.value;
         // const name = form.name.value;
 
+
         createUser(email, password)
             .then(result => {
                 const user = result.user;
                 form.reset();
-                console.log(user)
+                console.log(user);
 
             })
             .catch(error => {

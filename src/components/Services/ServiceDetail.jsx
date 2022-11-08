@@ -1,13 +1,55 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { Link, useLoaderData } from 'react-router-dom';
 import { AuthContext } from '../../context/AuthProvider';
+import Review from '../Review';
 
 const ServiceDetail = () => {
-    const { img, price, title, body } = useLoaderData();
+    const [userReview, setReview] = useState([]);
+    const { _id, img, price, title, body } = useLoaderData();
     const { user } = useContext(AuthContext);
+
+
+
+    const handleFeedback = event => {
+        event.preventDefault();
+        const form = event.target;
+        const feedback = form.feedback.value;
+        const name = user.displayName;
+        const email = user.email;
+        const photo = user.photoURL;
+        form.reset();
+
+        alert("Thank You. Your Feedback is saved. Please Reload the Page to View")
+        const review = {
+            service: _id,
+            person: feedback,
+            name,
+            email,
+            photo
+
+
+        }
+
+        fetch('http://localhost:5000/review', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(review)
+        })
+            .then(res => res.json())
+            .then(data => console.log(data))
+            .catch(er => console.log(er));
+
+
+    }
+    useEffect(() => {
+        fetch('http://localhost:5000/review')
+            .then(res => res.json())
+            .then(data => setReview(data))
+    }, [])
     return (
         <div className='bg-gray-800 p-6'>
-
             <section>
                 <div className="container max-w-6xl space-y-6 sm:space-y-12">
                     <div className="block max-w-sm gap-3 mx-auto sm:max-w-full group hover:no-underline focus:no-underline lg:grid lg:grid-cols-12 dark:bg-gray-800">
@@ -28,12 +70,25 @@ const ServiceDetail = () => {
             {/* Review Section */}
             <div>
                 <h3 className="text-2xl text-white font-semibold sm:text-4xl e group-focus:underline pb-6 underline">Reviews</h3>
-                <div className="mb-6">
-                    <label htmlFor="text" className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Give a Review</label>
-                    <input type="text" id="text" name='feedback' className="bg-gray-50 border border-gray-300 text-gray-900 text-lg h-16 rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Enter Your Feedback" required />
-                    <div className='text-end'>
-                        <button className='bg-cyan-700 w-[200px] text-center rounded-md font-medium my-6 mx-auto py-3 text-white'>Post</button>
+                <form onSubmit={handleFeedback}>
+                    <div className="mb-6">
+                        <label htmlFor="text" className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Give a Review</label>
+                        <input type="text" id="text" name='feedback' className="bg-gray-50 border border-gray-300 text-gray-900 text-lg h-16 rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Enter Your Feedback" required />
+                        <div className='text-end'>
+                            <button type="submit" className='bg-cyan-700 w-[200px] text-center rounded-md font-medium my-6 mx-auto py-3 text-white'>Post</button>
+                        </div>
                     </div>
+                </form>
+            </div>
+            <div>
+
+                <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'>
+                    {
+                        userReview.map(review => <Review
+                            key={review._id}
+                            review={review}
+                        ></Review>)
+                    }
                 </div>
             </div>
 
