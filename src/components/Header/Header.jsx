@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom';
 const Header = () => {
     let [open, setOpen] = useState(true);
     return (
-        <div>
+        <div className='text-center'>
             <nav className="flex items-center justify-between flex-wrap px-12  pt-4 bg-slate-600">
                 <div className="flex items-center flex-shrink-0 text-white mr-6">
                     <img src={logo} className=' h-12 w-12 mr-2' alt="" />
