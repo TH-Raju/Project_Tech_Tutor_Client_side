@@ -3,7 +3,7 @@ import React from 'react';
 const Card = ({ service }) => {
     const { img, price, title, body } = service;
     return (
-        <div className='w-96 mx-auto'>
+        <div className='md:w-96 mx-auto'>
             <div className="p-4 rounded-md shadow-md dark:bg-gray-900 dark:text-gray-100">
                 <img src={img} alt="service" className="object-cover object-center w-full rounded-t-md h-72 dark:bg-gray-500" />
                 <div className="flex flex-col justify-between py-6 space-y-8">

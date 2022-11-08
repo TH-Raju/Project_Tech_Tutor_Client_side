@@ -1,15 +1,23 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import logo from '../../img/tutor.png';
 import { ImCross } from "react-icons/im";
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../context/AuthProvider';
 
 
 // ImCross
 const Header = () => {
+    const { user, logOut } = useContext(AuthContext);
     let [open, setOpen] = useState(true);
+    let [errors, setError] = useState('');
+    const handleLogOut = () => {
+        logOut()
+            .then(() => { })
+            .catch(error => setError(error))
+    }
     return (
         <div className='text-center'>
-            <nav className="flex items-center justify-between flex-wrap px-12  pt-4 bg-slate-600">
+            <nav className="flex items-center justify-between flex-wrap px-12 pt-4 bg-slate-600">
                 <div className="flex items-center flex-shrink-0 text-white mr-6">
                     <img src={logo} className=' h-12 w-12 mr-2' alt="" />
                     <span className="font-semibold text-xl tracking-tight">Tech Tutor</span>
@@ -32,8 +40,17 @@ const Header = () => {
                         </Link>
                     </div>
                     <div>
-                        <Link to="/login" className="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-white mt-4 lg:mt-0 mx-4">Log in</Link>
-                        <Link to="/register" className="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-white mt-4 lg:mt-0">Register</Link>
+                        {
+                            user?.uid ?
+                                <>
+                                    <Link to="/register" onClick={handleLogOut} className="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-white mt-4 lg:mt-0">Log Out</Link>
+                                </>
+                                :
+                                <>
+                                    <Link to="/login" className="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-white mt-4 lg:mt-0 mx-4">Log in</Link>
+                                    <Link to="/register" className="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-white mt-4 lg:mt-0">Register</Link>
+                                </>
+                        }
                     </div>
                 </div>
             </nav>
