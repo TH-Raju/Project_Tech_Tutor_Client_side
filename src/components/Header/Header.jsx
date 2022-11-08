@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import logo from '../../img/tutor.png';
 import { ImCross } from "react-icons/im";
+import { Link } from 'react-router-dom';
 
 
 // ImCross
@@ -20,15 +21,15 @@ const Header = () => {
                 </div>
                 <div className={`w-full ${open ? 'hidden' : 'block'} flex-grow lg:flex lg:items-center lg:w-auto`}>
                     <div className="text-sm lg:flex-grow lg:bg-black bg-slate-700 rounded-lg py-2">
-                        <a href="#responsive-header" className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4 text-lg">
+                        <Link to='/home' className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4 text-lg">
                             Home
-                        </a>
-                        <a href="#responsive-header" className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4 text-lg">
+                        </Link>
+                        <Link to='/services' className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4 text-lg">
                             Service
-                        </a>
-                        <a href="#responsive-header" className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4 text-lg">
+                        </Link>
+                        <Link to='/blog' className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4 text-lg">
                             Blog
-                        </a>
+                        </Link>
                     </div>
                     <div>
                         <a href=" " className="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-white mt-4 lg:mt-0">Download</a>

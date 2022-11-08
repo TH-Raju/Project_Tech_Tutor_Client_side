@@ -1,3 +1,4 @@
+import Blog from "../components/Blog";
 import Home from "../components/Home/Home";
 import Main from "../layout/Main";
 
@@ -12,6 +13,19 @@ export const router = createBrowserRouter([
             {
                 path: '/',
                 element: <Home></Home>
+            },
+            {
+                path: '/home',
+                element: <Home></Home>
+            },
+            {
+                path: '/blog',
+                element: <Blog></Blog>
+            },
+            {
+                path: '/services',
+                element: <div>service page not added</div>
+
             }
         ]
     }
