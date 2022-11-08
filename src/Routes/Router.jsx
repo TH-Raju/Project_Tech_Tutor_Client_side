@@ -1,6 +1,9 @@
 import Blog from "../components/Blog";
 import ErrorPage from "../components/ErrorPage";
 import Home from "../components/Home/Home";
+import Login from "../components/Login";
+import Register from "../components/Register";
+import Services from "../components/Services/Services";
 import Main from "../layout/Main";
 
 
@@ -25,8 +28,16 @@ export const router = createBrowserRouter([
             },
             {
                 path: '/services',
-                element: <div>service page not added</div>
+                element: <Services></Services>
 
+            },
+            {
+                path: '/login',
+                element: <Login></Login>
+            },
+            {
+                path: '/register',
+                element: <Register></Register>
             }
         ]
     },
@@ -34,6 +45,5 @@ export const router = createBrowserRouter([
         path: '*',
         element: <ErrorPage></ErrorPage>
     }
-
 
 ])
