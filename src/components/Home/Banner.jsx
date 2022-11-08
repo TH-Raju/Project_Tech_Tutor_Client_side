@@ -8,7 +8,7 @@ const Banner = () => {
                     GROWING WITH LEARNING
                 </p>
                 <h1 className='md:text-7xl sm:text-6xl text-4xl font-bold md:py-6'>
-                    Grow with tech.
+                    Learn by Doing.
                 </h1>
                 <p className='md:text-2xl text-xl font-bold text-gray-500'>Learn the Best Technology with Us. Increase revenue for Desktop Laptop Mobile app platforms.</p>
                 <button className='bg-cyan-700 w-[200px] rounded-md font-medium my-6 mx-auto py-3 text-white'>Get Started</button>
