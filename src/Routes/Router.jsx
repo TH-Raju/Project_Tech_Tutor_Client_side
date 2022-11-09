@@ -1,7 +1,9 @@
+import AddService from "../components/AddService";
 import Blog from "../components/Blog";
 import ErrorPage from "../components/ErrorPage";
 import Home from "../components/Home/Home";
 import Login from "../components/Login";
+import MyReview from "../components/MyReview";
 import Register from "../components/Register";
 import ServiceDetail from "../components/Services/ServiceDetail";
 import Services from "../components/Services/Services";
@@ -44,6 +46,14 @@ export const router = createBrowserRouter([
                 path: '/servicedetail/:id',
                 element: <ServiceDetail></ServiceDetail>,
                 loader: ({ params }) => fetch(`https://tech-tutor-server-side.vercel.app/services/${params.id}`)
+            },
+            {
+                path: '/myreview',
+                element: <MyReview></MyReview>
+            },
+            {
+                path: '/addservice',
+                element: <AddService></AddService>
             }
 
         ]

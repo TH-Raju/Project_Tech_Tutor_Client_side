@@ -29,15 +29,39 @@ const Header = () => {
                 </div>
                 <div className={`w-full ${open ? 'hidden' : 'block'} flex-grow lg:flex lg:items-center lg:w-auto`}>
                     <div className="text-sm lg:flex-grow lg:bg-black bg-slate-700 rounded-lg py-2">
-                        <Link to='/home' className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4 text-lg">
-                            Home
-                        </Link>
-                        <Link to='/services' className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4 text-lg">
-                            Service
-                        </Link>
-                        <Link to='/blog' className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4 text-lg">
-                            Blog
-                        </Link>
+
+                        {
+                            user?.uid ?
+                                <>
+                                    <Link to='/home' className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4 text-lg">
+                                        Home
+                                    </Link>
+                                    <Link to='/services' className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4 text-lg">
+                                        Service
+                                    </Link>
+                                    <Link to='/blog' className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4 text-lg">
+                                        Blog
+                                    </Link>
+                                    <Link to='/myreview' className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4 text-lg">
+                                        My Review
+                                    </Link>
+                                    <Link to='/addservice' className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4 text-lg">
+                                        Add Service
+                                    </Link>
+                                </>
+                                :
+                                <>
+                                    <Link to='/home' className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4 text-lg">
+                                        Home
+                                    </Link>
+                                    <Link to='/services' className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4 text-lg">
+                                        Service
+                                    </Link>
+                                    <Link to='/blog' className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4 text-lg">
+                                        Blog
+                                    </Link>
+                                </>
+                        }
                     </div>
                     <div>
                         {
