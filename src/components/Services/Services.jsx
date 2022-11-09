@@ -1,14 +1,17 @@
 import React, { useEffect, useState } from 'react';
 import { SpinnerCircular } from 'spinners-react';
+import useTitle from '../../useTitle';
 import Card from '../Card';
 
 const Services = () => {
+    useTitle('Services');
     toggle(true);
     const [services, setServices] = useState([]);
 
 
     useEffect(() => {
         toggle(true);
+
         fetch('https://tech-tutor-server-side.vercel.app/services')
             .then(res => res.json())
             .then(data => setServices(data))

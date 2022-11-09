@@ -5,8 +5,10 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { SpinnerCircular } from 'spinners-react';
 
 import { AuthContext } from '../context/AuthProvider';
+import useTitle from '../useTitle';
 
 const Login = () => {
+    useTitle('Log in');
     toggle(true);
     const { user, signIn, googleProviderLogin } = useContext(AuthContext);
     const googleProvider = new GoogleAuthProvider();

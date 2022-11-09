@@ -1,17 +1,12 @@
 import React, { useEffect, useState } from 'react';
+import useTitle from '../useTitle';
 
 import PersonalReview from './PersonalReview';
 
 const MyReview = () => {
 
     const [userReview, setUserReview] = useState([]);
-
-
-
-
-
-
-
+    useTitle('My Reviews');
 
     useEffect(() => {
         fetch('https://tech-tutor-server-side.vercel.app/review')

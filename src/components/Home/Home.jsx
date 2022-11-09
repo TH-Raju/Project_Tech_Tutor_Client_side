@@ -1,10 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import useTitle from '../../useTitle';
 import Service from '../Services/Service';
 import Banner from './Banner';
 import Summary from './Summary';
 
 const Home = () => {
+    useTitle('Home');
     return (
         <div className='bg-gray-800'>
             <Banner></Banner>

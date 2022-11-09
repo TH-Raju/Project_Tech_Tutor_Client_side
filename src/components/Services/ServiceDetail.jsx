@@ -4,11 +4,13 @@ import { AuthContext } from '../../context/AuthProvider';
 import Review from '../Review';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import useTitle from '../../useTitle';
 
 const ServiceDetail = () => {
     const [userReview, setReview] = useState([]);
     const { _id, img, price, title, body } = useLoaderData();
     const { user } = useContext(AuthContext);
+    useTitle('Service Detail');
 
     const notify = () => toast.warn(' Log in First!', {
         position: "top-center",

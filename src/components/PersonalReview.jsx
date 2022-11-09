@@ -2,10 +2,12 @@ import React, { useContext } from 'react';
 import { BsFillPersonFill } from "react-icons/bs";
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../context/AuthProvider';
+import useTitle from '../useTitle';
 
 const PersonalReview = ({ reviews }) => {
     const { user } = useContext(AuthContext);
     const { person, email, photo, name, _id } = reviews;
+    useTitle('Reviews');
 
     const handleDelete = (reviews) => {
         const agree = window.confirm(`Are you sure to delete: ${_id}`)

@@ -5,8 +5,10 @@ import { GoogleAuthProvider } from 'firebase/auth';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { SpinnerCircular } from 'spinners-react';
+import useTitle from '../useTitle';
 
 const Register = () => {
+    useTitle('Register');
     toggle(true);
     const { createUser, googleProviderLogin } = useContext(AuthContext);
     const [errors, setErrors] = useState('');

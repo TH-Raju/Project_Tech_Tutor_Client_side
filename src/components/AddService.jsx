@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
+import useTitle from '../useTitle';
 
 const AddService = () => {
     const [review, setReview] = useState({});
+    useTitle('Add Service');
 
 
     const handleAddReview = event => {

@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
+import useTitle from '../useTitle';
 
 const ReviewUpdate = () => {
+    useTitle('Update')
     const review = useLoaderData();
     const [view, setView] = useState(review);
 
