@@ -1,16 +1,34 @@
 import React, { useContext } from 'react';
 import { BsFillPersonFill } from "react-icons/bs";
+import { Link } from 'react-router-dom';
 import { AuthContext } from '../context/AuthProvider';
 
 const PersonalReview = ({ reviews }) => {
     const { user } = useContext(AuthContext);
-    const { person, email, photo, name } = reviews;
-    console.log(user.email, email);
+    const { person, email, photo, name, _id } = reviews;
+
+    const handleDelete = (reviews) => {
+        const agree = window.confirm(`Are you sure to delete: ${_id}`)
+
+        if (agree) {
+            fetch(`https://tech-tutor-server-side.vercel.app/review/${reviews._id}`, {
+                method: 'DELETE',
+                headers: {
+                    'content-type': 'application/json'
+                },
+                body: JSON.stringify(reviews)
+            })
+                .then(res => res.json())
+                .then(data => console.log(data));
+        }
+        console.log(_id)
+    }
 
     return (
         <div className='my-5'>
+
             {
-                user.email === email ?
+                email === user?.email ?
                     <>
                         <div className="container flex flex-col w-full max-w-lg p-6 mx-auto divide-y rounded-md divide-gray-700 dark:bg-gray-900 dark:text-gray-100">
                             <div className="flex justify-between p-4">
@@ -27,8 +45,11 @@ const PersonalReview = ({ reviews }) => {
                                 </div>
                                 <div className="flex items-center space-x-2 dark:text-yellow-500">
                                     <div>
-                                        <button className='mr-4 '>Update</button>
-                                        <button>Delet</button>
+                                        <Link to={`/review/${_id}`}>
+                                            <button className='mr-4 '>Update</button>
+
+                                        </Link>
+                                        <button onClick={() => handleDelete(reviews)}>Delet</button>
 
                                     </div>
 
@@ -43,12 +64,21 @@ const PersonalReview = ({ reviews }) => {
                                 <p className='text-lg'>{person}</p>
 
                             </div>
+
                         </div>
+
                     </>
                     :
-                    <></>
+                    <>
+
+
+                    </>
+
+
             }
-        </div>
+
+
+        </div >
     );
 };
 

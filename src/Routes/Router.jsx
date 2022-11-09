@@ -7,6 +7,7 @@ import MyReview from "../components/MyReview";
 import Register from "../components/Register";
 import ServiceDetail from "../components/Services/ServiceDetail";
 import Services from "../components/Services/Services";
+import Update from "../components/Update";
 import Main from "../layout/Main";
 
 
@@ -54,6 +55,11 @@ export const router = createBrowserRouter([
             {
                 path: '/addservice',
                 element: <AddService></AddService>
+            },
+            {
+                path: '/review/:id',
+                element: <Update></Update>,
+                loader: ({ params }) => fetch(`http://localhost:3000/review/${params._id}`)
             }
 
         ]
