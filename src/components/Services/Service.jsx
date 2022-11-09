@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import Card from '../Card';
 
-const Services = () => {
-    const [services, setServices] = useState([]);
+const Service = () => {
+    const [service, setService] = useState([]);
 
 
     useEffect(() => {
-        fetch('https://tech-tutor-server-side.vercel.app/services')
+        fetch('https://tech-tutor-server-side.vercel.app/service')
             .then(res => res.json())
-            .then(data => setServices(data))
+            .then(data => setService(data))
     }, [])
     return (
         <div>
@@ -20,7 +20,7 @@ const Services = () => {
             </div>
             <div className=' grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 my-10'>
                 {
-                    services.map(service => <Card key={service.s_id}
+                    service.map(service => <Card key={service.s_id}
                         service={service}
                     ></Card>)
                 }
@@ -29,4 +29,4 @@ const Services = () => {
     );
 };
 
-export default Services;
+export default Service;

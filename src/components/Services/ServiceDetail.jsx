@@ -2,11 +2,24 @@ import React, { useContext, useEffect, useState } from 'react';
 import { Link, useLoaderData } from 'react-router-dom';
 import { AuthContext } from '../../context/AuthProvider';
 import Review from '../Review';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const ServiceDetail = () => {
     const [userReview, setReview] = useState([]);
     const { _id, img, price, title, body } = useLoaderData();
     const { user } = useContext(AuthContext);
+
+    const notify = () => toast.warn(' Log in First!', {
+        position: "top-center",
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "dark",
+    });
 
 
 
@@ -19,6 +32,8 @@ const ServiceDetail = () => {
         const photo = user.photoURL;
         form.reset();
 
+        window.location.reload();
+
         alert("Thank You. Your Feedback is saved. Please Reload the Page to View")
         const review = {
             service: _id,
@@ -30,7 +45,7 @@ const ServiceDetail = () => {
 
         }
 
-        fetch('http://localhost:5000/review', {
+        fetch('https://tech-tutor-server-side.vercel.app/review', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -44,7 +59,7 @@ const ServiceDetail = () => {
 
     }
     useEffect(() => {
-        fetch('http://localhost:5000/review')
+        fetch('https://tech-tutor-server-side.vercel.app/review')
             .then(res => res.json())
             .then(data => setReview(data))
     }, [])
@@ -68,6 +83,7 @@ const ServiceDetail = () => {
             </section>
 
             {/* Review Section */}
+
             <div>
                 <h3 className="text-2xl text-white font-semibold sm:text-4xl e group-focus:underline pb-6 underline">Reviews</h3>
                 <form onSubmit={handleFeedback}>
@@ -75,11 +91,20 @@ const ServiceDetail = () => {
                         <label htmlFor="text" className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Give a Review</label>
                         <input type="text" id="text" name='feedback' className="bg-gray-50 border border-gray-300 text-gray-900 text-lg h-16 rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Enter Your Feedback" required />
                         <div className='text-end'>
-                            <button type="submit" className='bg-cyan-700 w-[200px] text-center rounded-md font-medium my-6 mx-auto py-3 text-white'>Post</button>
+                            {
+                                user?.uid ?
+                                    <button type="submit" className='bg-cyan-700 w-[200px] text-center rounded-md font-medium my-6 mx-auto py-3 text-white'>Post</button>
+                                    :
+                                    <>
+                                        <Link to='/login'><button onClick={notify} className='bg-cyan-700 w-[200px] text-center rounded-md font-medium my-6 mx-auto py-3 text-white'>Post</button></Link>
+                                        <ToastContainer />
+                                    </>
+                            }
                         </div>
                     </div>
                 </form>
             </div>
+
             <div>
 
                 <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'>
