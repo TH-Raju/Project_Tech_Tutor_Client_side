@@ -1,6 +1,8 @@
 # Project Documentation
 
-# Website Name - Education Unlimited
+# Website Name - Tech Tutor 
+
+## personal Website
 
 # Live Preview  [https://tech-tutor-d74e8.web.app/]  
 ## click on the link to view Live site in your browser.
