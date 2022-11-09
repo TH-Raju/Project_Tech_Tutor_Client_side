@@ -2,6 +2,7 @@ import { GoogleAuthProvider } from 'firebase/auth';
 import React, { useContext, useEffect, useState } from 'react';
 import { FcGoogle } from "react-icons/fc";
 import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { SpinnerCircular } from 'spinners-react';
 
 import { AuthContext } from '../context/AuthProvider';
 import useTitle from '../useTitle';
@@ -11,8 +12,14 @@ const Login = () => {
     const { user, signIn, googleProviderLogin } = useContext(AuthContext);
     const googleProvider = new GoogleAuthProvider();
     const [errors, setErrors] = useState('');
+    const [load, setLoad] = useState(true);
     const location = useLocation();
 
+    if (load) {
+        <SpinnerCircular />
+    } else {
+        <SpinnerCircular enabled={false} />
+    }
     const navigates = useNavigate();
     const from = location.state?.from?.pathname || '/services';
 
@@ -42,8 +49,10 @@ const Login = () => {
                     .then(res => res.json())
                     .then(data => {
                         console.log(data);
+                        setLoad(false);
                         localStorage.setItem('token', data.token);
                     })
+                setLoad(true)
                 form.reset();
             })
             .catch(error => {
@@ -91,7 +100,9 @@ const Login = () => {
         </div>
 
     );
+
 };
+
 
 
 

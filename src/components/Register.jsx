@@ -12,7 +12,14 @@ const Register = () => {
     toggle(true);
     const { createUser, googleProviderLogin } = useContext(AuthContext);
     const [errors, setErrors] = useState('');
+    const [load, setLoad] = useState(true);
     const googleProvider = new GoogleAuthProvider();
+
+    if (load) {
+        <SpinnerCircular />
+    } else {
+        <SpinnerCircular enabled={false} />
+    }
 
     const handleGoogleSignIn = () => {
         googleProviderLogin(googleProvider)
@@ -36,10 +43,12 @@ const Register = () => {
         createUser(email, password)
             .then(result => {
                 const user = result.user;
+                setLoad(true);
                 form.reset();
                 console.log(user);
 
             })
+        setLoad(false)
             .catch(error => {
                 console.log(error);
                 setErrors(error.message);
