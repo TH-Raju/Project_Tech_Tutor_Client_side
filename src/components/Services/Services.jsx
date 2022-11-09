@@ -3,6 +3,7 @@ import { SpinnerCircular } from 'spinners-react';
 import Card from '../Card';
 
 const Services = () => {
+    document.title = 'services'
     toggle(true);
     const [services, setServices] = useState([]);
 
