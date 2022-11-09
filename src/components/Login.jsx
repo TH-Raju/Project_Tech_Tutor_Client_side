@@ -2,14 +2,12 @@ import { GoogleAuthProvider } from 'firebase/auth';
 import React, { useContext, useEffect, useState } from 'react';
 import { FcGoogle } from "react-icons/fc";
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import { SpinnerCircular } from 'spinners-react';
 
 import { AuthContext } from '../context/AuthProvider';
 import useTitle from '../useTitle';
 
 const Login = () => {
     useTitle('Log in');
-    toggle(true);
     const { user, signIn, googleProviderLogin } = useContext(AuthContext);
     const googleProvider = new GoogleAuthProvider();
     const [errors, setErrors] = useState('');
@@ -33,6 +31,7 @@ const Login = () => {
                     email: user.email
                 }
                 // console.log(user);
+
                 fetch('https://tech-tutor-server-side.vercel.app/jwt', {
                     method: 'POST',
                     headers: {
@@ -95,13 +94,6 @@ const Login = () => {
 };
 
 
-const toggle = load => {
-    if (load) {
-        <SpinnerCircular />
-    } else {
-        <SpinnerCircular enabled={false} />
-    }
 
-}
 
 export default Login;

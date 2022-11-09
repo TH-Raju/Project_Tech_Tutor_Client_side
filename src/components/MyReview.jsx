@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { SpinnerCircular } from 'spinners-react';
 import useTitle from '../useTitle';
 
 import PersonalReview from './PersonalReview';
@@ -15,7 +16,10 @@ const MyReview = () => {
     }, [])
     return (
         <div>
-
+            {
+                userReview.length === 0 ?
+                    <div ><SpinnerCircular /></div> : <SpinnerCircular enabled={false} />
+            }
             {
                 userReview.map(reviews =>
                     <PersonalReview

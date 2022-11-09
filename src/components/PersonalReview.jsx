@@ -42,13 +42,13 @@ const PersonalReview = ({ reviews }) => {
                                     </div>
                                     <div>
                                         <h4 className="font-bold">{name ? name : email}</h4>
-                                        {/* <span className="text-xs dark:text-gray-400">2 days ago</span> */}
+
                                     </div>
                                 </div>
                                 <div className="flex items-center space-x-2 dark:text-yellow-500">
                                     <div>
                                         <Link to={`/reviewupdate/${_id}`}>
-                                            <button className='mr-4 '>Update</button>
+                                            <button className='mr-4 '>Edit</button>
 
                                         </Link>
                                         <button onClick={() => handleDelete(reviews)}>Delet</button>
