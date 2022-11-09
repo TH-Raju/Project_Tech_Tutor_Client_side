@@ -32,7 +32,6 @@ const ServiceDetail = () => {
         const photo = user.photoURL;
         form.reset();
 
-        window.location.reload();
 
         alert("Thank You. Your Feedback is saved. Please Reload the Page to View")
         const review = {
