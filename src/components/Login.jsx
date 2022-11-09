@@ -2,9 +2,12 @@ import { GoogleAuthProvider } from 'firebase/auth';
 import React, { useContext, useEffect, useState } from 'react';
 import { FcGoogle } from "react-icons/fc";
 import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { SpinnerCircular } from 'spinners-react';
+
 import { AuthContext } from '../context/AuthProvider';
 
 const Login = () => {
+    toggle(true);
     const { user, signIn, googleProviderLogin } = useContext(AuthContext);
     const googleProvider = new GoogleAuthProvider();
     const [errors, setErrors] = useState('');
@@ -24,7 +27,22 @@ const Login = () => {
         signIn(email, password)
             .then(result => {
                 const user = result.user;
-                console.log(user);
+                const currentUser = {
+                    email: user.email
+                }
+                // console.log(user);
+                fetch('https://tech-tutor-server-side.vercel.app/jwt', {
+                    method: 'POST',
+                    headers: {
+                        'content-type': 'application/json'
+                    },
+                    body: JSON.stringify(currentUser)
+                })
+                    .then(res => res.json())
+                    .then(data => {
+                        console.log(data);
+                        localStorage.setItem('token', data.token);
+                    })
                 form.reset();
             })
             .catch(error => {
@@ -67,13 +85,21 @@ const Login = () => {
                 <br />
                 <p className='mt-4 text-white'>Don't have Account? <Link to='/register' className='text-green-500 font-bold underline'>Create Account</Link></p>
                 <button type="button" onClick={handleGoogleSignIn} className="px-14 py-3 flex align-middle gap-5 w-full mt-6 text-center font-semibold border rounded-xl border-blue-900 dark:border-gray-100 dark:text-gray-100 hover:bg-slate-900"><FcGoogle className='text-2xl'></FcGoogle> Log in with Google</button>
-
-
             </form>
 
-
         </div>
+
     );
 };
+
+
+const toggle = load => {
+    if (load) {
+        <SpinnerCircular />
+    } else {
+        <SpinnerCircular enabled={false} />
+    }
+
+}
 
 export default Login;

@@ -4,8 +4,10 @@ import { AuthContext } from '../context/AuthProvider';
 import { GoogleAuthProvider } from 'firebase/auth';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { SpinnerCircular } from 'spinners-react';
 
 const Register = () => {
+    toggle(true);
     const { createUser, googleProviderLogin } = useContext(AuthContext);
     const [errors, setErrors] = useState('');
     const googleProvider = new GoogleAuthProvider();
@@ -67,9 +69,21 @@ const Register = () => {
                 <p className='mt-4 text-white'>Already have Account? <Link to='/login' className='text-green-400 font-bold underline'>Log in</Link></p>
                 <button type="button" onClick={handleGoogleSignIn} className="px-14 py-3 flex align-middle gap-5 w-full mt-6 text-center font-semibold border rounded-xl border-blue-900 dark:border-gray-100 dark:text-gray-100 hover:bg-slate-900"><FcGoogle className='text-2xl'></FcGoogle> Register with Google</button>
             </form>
-
+            {
+                toggle(false)
+            }
         </div>
+
     );
 };
+
+const toggle = load => {
+    if (load) {
+        <SpinnerCircular />
+    } else {
+        <SpinnerCircular enabled={false} />
+    }
+
+}
 
 export default Register;
