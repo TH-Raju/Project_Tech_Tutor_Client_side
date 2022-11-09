@@ -45,7 +45,7 @@ const PersonalReview = ({ reviews }) => {
                                 </div>
                                 <div className="flex items-center space-x-2 dark:text-yellow-500">
                                     <div>
-                                        <Link to={`/review/${_id}`}>
+                                        <Link to={`/reviewupdate/${_id}`}>
                                             <button className='mr-4 '>Update</button>
 
                                         </Link>

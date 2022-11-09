@@ -5,9 +5,9 @@ import Home from "../components/Home/Home";
 import Login from "../components/Login";
 import MyReview from "../components/MyReview";
 import Register from "../components/Register";
+import ReviewUpdate from "../components/ReviewUpdate";
 import ServiceDetail from "../components/Services/ServiceDetail";
 import Services from "../components/Services/Services";
-import Update from "../components/Update";
 import Main from "../layout/Main";
 
 
@@ -57,9 +57,9 @@ export const router = createBrowserRouter([
                 element: <AddService></AddService>
             },
             {
-                path: '/review/:id',
-                element: <Update></Update>,
-                loader: ({ params }) => fetch(`http://localhost:3000/review/${params._id}`)
+                path: '/reviewupdate/:id',
+                element: <ReviewUpdate></ReviewUpdate>,
+                loader: ({ params }) => fetch(`https://tech-tutor-server-side.vercel.app/review/${params.id}`)
             }
 
         ]
