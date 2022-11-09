@@ -14,7 +14,7 @@ const Login = () => {
     const location = useLocation();
 
     const navigates = useNavigate();
-    const from = location.state?.from?.pathname || '/';
+    const from = location.state?.from?.pathname || '/services';
 
     const handleOnSubmit = event => {
         event.preventDefault();

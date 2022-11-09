@@ -3,18 +3,13 @@ import { SpinnerCircular } from 'spinners-react';
 import Card from '../Card';
 
 const Services = () => {
-    document.title = 'services'
     toggle(true);
     const [services, setServices] = useState([]);
 
 
     useEffect(() => {
         toggle(true);
-        fetch('https://tech-tutor-server-side.vercel.app/services', {
-            headers: {
-                authorization: `Bearer ${localStorage.getItem('token')} `
-            }
-        })
+        fetch('https://tech-tutor-server-side.vercel.app/services')
             .then(res => res.json())
             .then(data => setServices(data))
     }, [])
@@ -37,9 +32,7 @@ const Services = () => {
 
                 }
             </div>
-            {
-                toggle(false)
-            }
+
         </div>
     );
 };
