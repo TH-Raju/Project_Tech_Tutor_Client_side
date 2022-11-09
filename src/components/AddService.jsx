@@ -22,7 +22,7 @@ const AddService = () => {
             .then(res => res.json())
             .then(data => {
                 if (data.acknowledged) {
-                    alert("Task Added");
+                    alert("Service Added");
                     event.target.reset();
                 }
                 console.log(data)

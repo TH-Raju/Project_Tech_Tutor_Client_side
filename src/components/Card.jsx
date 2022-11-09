@@ -8,7 +8,7 @@ const Card = ({ service }) => {
         <PhotoProvider>
             <div className='md:w-96 mx-auto'>
                 <div className="p-4 rounded-md shadow-md dark:bg-gray-900 dark:text-gray-100">
-                    <PhotoView key={_id} src={img}>
+                    <PhotoView src={img}>
                         <img src={img} alt="service" className="object-cover object-center w-full rounded-t-md h-72 dark:bg-gray-500" />
                     </PhotoView>
                     <div className="flex flex-col justify-between py-6 space-y-8">
