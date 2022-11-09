@@ -65,7 +65,7 @@ const ServiceDetail = () => {
     return (
         <div className='bg-gray-800 p-6'>
             <section>
-                <div className="container max-w-6xl space-y-6 sm:space-y-12">
+                <div className="container max-w-6xl mx-auto mt-16 space-y-6 sm:space-y-12">
                     <div className="block max-w-sm gap-3 mx-auto sm:max-w-full group hover:no-underline focus:no-underline lg:grid lg:grid-cols-12 dark:bg-gray-800">
                         <img src={img} alt="Website Design System" className="object-cover w-full h-64 rounded sm:h-96 lg:col-span-7 dark:bg-gray-500" />
                         <div className="p-6 space-y-2 lg:col-span-5">
