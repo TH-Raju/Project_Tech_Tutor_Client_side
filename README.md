@@ -1,3 +1,31 @@
+# Project Documentation
+
+# Website Name - Education Unlimited
+
+# Live Preview  [https://tech-tutor-d74e8.web.app/]  
+## click on the link to view Live site in your browser.
+
+
+# Website's different features and functionality
+* This is a Learning platform. Where You can learn various types of Tech Platforms.
+* There are different features of courses. 
+* You can download and read the pdf file of course free of cost 
+* On our website, You can see Course Description and Price also Other Information
+* Our website is responsive. You can read our course section or blog section on the mobile or tab and laptop or desktop. 
+
+
+# Used technologies 
+
+* React
+* React hooks and libraries
+* Tailwind CSS
+* Memba UI
+* Firebase
+* Vercel
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -35,9 +63,6 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 
 If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
 ## Learn More
 
