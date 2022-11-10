@@ -33,7 +33,6 @@ const ServiceDetail = () => {
         const name = user.displayName;
         const email = user.email;
         const photo = user.photoURL;
-        const date = new Date();
         form.reset();
 
 
@@ -44,7 +43,6 @@ const ServiceDetail = () => {
             name,
             email,
             photo,
-            date
 
 
         }
