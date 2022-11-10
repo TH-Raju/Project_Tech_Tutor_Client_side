@@ -32,6 +32,7 @@ const ServiceDetail = () => {
         const name = user.displayName;
         const email = user.email;
         const photo = user.photoURL;
+        const date = new Date();
         form.reset();
 
 
@@ -41,7 +42,8 @@ const ServiceDetail = () => {
             person: feedback,
             name,
             email,
-            photo
+            photo,
+            date
 
 
         }
