@@ -7,7 +7,6 @@ const Services = () => {
     useTitle('Services');
     const [services, setServices] = useState([]);
 
-
     useEffect(() => {
         fetch('https://tech-tutor-server-side.vercel.app/services')
             .then(res => res.json())
