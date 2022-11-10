@@ -34,31 +34,31 @@ const Summary = () => {
             </section>
 
 
-            <div>
+            <div className='text-white'>
                 <h1 className='bg-gray-800 underline text-white text-3xl text-center py-10 font-bold'>Contact With Me</h1>
                 <div className="grid w-full grid-cols-1 gap-8  py-16 mx-auto md:grid-cols-2 md:px-12  xl:px-32 pl-4 dark:bg-gray-800 dark:text-gray-100">
 
                     <div className="flex flex-col justify-between">
                         <div className="space-y-2">
-                            <h2 className="text-4xl font-bold leading-tight lg:text-5xl">Let's talk!</h2>
+                            <h2 className="text-4xl text-white font-bold leading-tight lg:text-5xl">Let's talk!</h2>
                             <div className="dark:text-gray-400">You want to say me</div>
                         </div>
                         <img src={img} alt="Contact our customer support" className="p-6 h-52 md:h-64 w-72" />
                     </div>
                     <form noValidate="" className="space-y-6 ng-untouched ng-pristine ng-valid">
                         <div>
-                            <label htmlFor="name" className="text-sm">Full name</label>
+                            <label htmlFor="name" className="text-sm text-white">Full name</label>
                             <input id="name" type="text" placeholder="Your name" className="w-full p-3 rounded dark:bg-gray-800" />
                         </div>
                         <div>
-                            <label htmlFor="email" className="text-sm">Email</label>
+                            <label htmlFor="email" className="text-sm text-white">Email</label>
                             <input id="email" type="email" placeholder="Your email" className="w-full p-3 rounded dark:bg-gray-800" />
                         </div>
                         <div>
-                            <label htmlFor="message" className="text-sm">Message</label>
+                            <label htmlFor="message" className="text-sm text-white">Message</label>
                             <textarea id="message" rows="3" placeholder="Your message" className="w-full p-3 rounded dark:bg-gray-800"></textarea>
                         </div>
-                        <button type="submit" method="POST" action="mailto: rajukhan894200@gmail.com" encType="multipart/form-data" className="w-full p-3 text-sm font-bold tracking-wide uppercase rounded dark:bg-violet-400 dark:text-gray-900">Send Message</button>
+                        <button type="submit" method="POST" action="mailto: rajukhan894200@gmail.com" encType="multipart/form-data" className="w-full p-3 text-sm font-bold tracking-wide uppercase rounded dark:bg-violet-400 bg-violet-200  dark:text-gray-900">Send Message</button>
                     </form>
                 </div>
             </div>

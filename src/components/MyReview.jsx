@@ -8,6 +8,17 @@ const MyReview = () => {
 
     const [userReview, setUserReview] = useState([]);
     useTitle('My Reviews');
+    // console.log(userReview[0].email);
+
+    useEffect(() => {
+        fetch(`https://tech-tutor-server-side.vercel.app/review?email=$${userReview.email}`, {
+            headers: {
+                authorization: `Bearer ${localStorage.getItem('token')}`
+            }
+        })
+            .then(res => res.json())
+            .then(data => setUserReview(data))
+    }, [userReview.email])
 
     useEffect(() => {
         fetch('https://tech-tutor-server-side.vercel.app/review')
