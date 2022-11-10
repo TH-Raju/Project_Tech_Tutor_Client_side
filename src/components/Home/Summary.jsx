@@ -6,27 +6,27 @@ const Summary = () => {
         <div>
             <section className="p-6 dark:bg-gray-800 dark:text-gray-100">
                 <div className="container grid justify-center grid-cols-2 mx-auto text-center lg:grid-cols-3">
-                    <div className="flex flex-col justify-start m-2 lg:m-6">
+                    <div className="flex flex-col justify-start m-2 lg:m-6 text-white">
                         <p className="text-4xl font-bold leading-none lg:text-6xl">50+</p>
                         <p className="text-sm sm:text-base">Clients</p>
                     </div>
-                    <div className="flex flex-col justify-start m-2 lg:m-6">
+                    <div className="flex flex-col justify-start m-2 lg:m-6 text-white">
                         <p className="text-4xl font-bold leading-none lg:text-6xl">30K</p>
                         <p className="text-sm sm:text-base">Followers on social media</p>
                     </div>
-                    <div className="flex flex-col justify-start m-2 lg:m-6">
+                    <div className="flex flex-col justify-start m-2 lg:m-6 text-white">
                         <p className="text-4xl font-bold leading-none lg:text-6xl">20</p>
                         <p className="text-sm sm:text-base">Published site</p>
                     </div>
-                    <div className="flex flex-col justify-start m-2 lg:m-6">
+                    <div className="flex flex-col justify-start m-2 lg:m-6 text-white">
                         <p className="text-4xl font-bold leading-none lg:text-6xl">5+</p>
                         <p className="text-sm sm:text-base">TECH Course</p>
                     </div>
-                    <div className="flex flex-col justify-start m-2 lg:m-6">
+                    <div className="flex flex-col justify-start m-2 lg:m-6 text-white">
                         <p className="text-4xl font-bold leading-none lg:text-6xl">4</p>
                         <p className="text-sm sm:text-base">Years of experience</p>
                     </div>
-                    <div className="flex flex-col justify-start m-2 lg:m-6">
+                    <div className="flex flex-col justify-start m-2 lg:m-6 text-white">
                         <p className="text-4xl font-bold leading-none lg:text-6xl">10+</p>
                         <p className="text-sm sm:text-base">Workshops</p>
                     </div>
@@ -58,7 +58,7 @@ const Summary = () => {
                             <label htmlFor="message" className="text-sm text-white">Message</label>
                             <textarea id="message" rows="3" placeholder="Your message" className="w-full p-3 rounded dark:bg-gray-800"></textarea>
                         </div>
-                        <button type="submit" method="POST" action="mailto: rajukhan894200@gmail.com" encType="multipart/form-data" className="w-full p-3 text-sm font-bold tracking-wide uppercase rounded dark:bg-violet-400 bg-violet-200  dark:text-gray-900">Send Message</button>
+                        <button type="submit" method="POST" action="mailto: rajukhan894200@gmail.com" encType="multipart/form-data" className="w-full p-3 text-sm font-bold tracking-wide uppercase rounded dark:bg-violet-400 bg-violet-300  dark:text-gray-900">Send Message</button>
                     </form>
                 </div>
             </div>
