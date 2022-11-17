@@ -4,7 +4,6 @@ import ErrorPage from "../components/ErrorPage";
 import Home from "../components/Home/Home";
 import Login from "../components/Login";
 import MyReview from "../components/MyReview";
-import PrivateRoute from "../components/PrivateRoute";
 import Register from "../components/Register";
 import ReviewUpdate from "../components/ReviewUpdate";
 import ServiceDetail from "../components/Services/ServiceDetail";

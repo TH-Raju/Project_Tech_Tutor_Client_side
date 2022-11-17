@@ -28,7 +28,7 @@ const Header = () => {
                     </button>
                 </div>
                 <div className={`w-full ${open ? 'hidden' : 'block'} flex-grow lg:flex lg:items-center lg:w-auto`}>
-                    <div className="text-sm lg:flex-grow lg:bg-black bg-slate-700 rounded-lg py-2">
+                    <div className="text-sm lg:flex-grow bg-none rounded-lg py-2">
 
                         {
                             user?.uid ?
