@@ -1,10 +1,11 @@
 import React from 'react';
 import img from '../../img/tutor.png'
+import Review from './Review';
 
 const Summary = () => {
     return (
         <div>
-            <section className="p-6 dark:bg-gray-800 dark:text-gray-100">
+            <section className="p-6 mb-28 dark:bg-gray-800 dark:text-gray-100">
                 <div className="container grid justify-center grid-cols-2 mx-auto text-center lg:grid-cols-3">
                     <div className="flex flex-col justify-start m-2 lg:m-6 text-white">
                         <p className="text-4xl font-bold leading-none lg:text-6xl">50+</p>
@@ -32,7 +33,7 @@ const Summary = () => {
                     </div>
                 </div>
             </section>
-
+            <Review></Review>
 
             <div className='text-white'>
                 <h1 className='bg-gray-800 underline text-white text-3xl text-center py-10 font-bold'>Contact With Me</h1>
@@ -58,7 +59,7 @@ const Summary = () => {
                             <label htmlFor="message" className="text-sm text-white">Message</label>
                             <textarea id="message" rows="3" placeholder="Your message" className="w-full p-3 rounded dark:bg-gray-800"></textarea>
                         </div>
-                        <button type="submit" method="POST" action="mailto: rajukhan894200@gmail.com" encType="multipart/form-data" className="w-full p-3 text-sm font-bold tracking-wide uppercase rounded dark:bg-violet-400 bg-violet-300  dark:text-gray-900">Send Message</button>
+                        <button type="submit" method="POST" action="mailto: rajukhan894200@gmail.com" encType="multipart/form-data" className="w-full p-3 text-sm font-bold tracking-wide uppercase rounded bg-cyan-700">Send Message</button>
                     </form>
                 </div>
             </div>

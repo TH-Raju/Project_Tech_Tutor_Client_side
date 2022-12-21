@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const Banner = () => {
     return (
-        <div className='text-white bg-black'>
+        <div className='text-white h-screen bg-black mb-24'>
             <div className='max-w-[800px] mt-[-96px] w-full h-screen mx-auto text-center flex flex-col justify-center'>
                 <p className='text-[#00df9a] font-bold p-2'>
                     GROWING WITH LEARNING

@@ -13,7 +13,7 @@ const Home = () => {
             <Banner></Banner>
             <Service></Service>
             <div className='text-center'>
-                <Link to='/services'> <button className='bg-cyan-700 w-[200px] text-center rounded-md font-medium my-6 mx-auto py-3 text-white'>See All</button></Link>
+                <Link to='/services' > <button className='bg-cyan-700 mt-20 w-[200px] text-center rounded-md font-medium mb-24 mx-auto py-3 text-white'>See All</button></Link>
             </div>
             <OwnSection></OwnSection>
             <Summary></Summary>

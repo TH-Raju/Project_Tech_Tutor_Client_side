@@ -12,7 +12,7 @@ const Service = () => {
     return (
         <div>
 
-            <div className='text-center'>
+            <div className='text-center mb-24 bg-gray-800'>
                 <h1 className='md:text-7xl sm:text-6xl text-4xl text-white font-bold md:py-6'>
                     My Services
                 </h1>
@@ -20,7 +20,7 @@ const Service = () => {
             </div>
             <div className=' grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 my-10'>
                 {
-                    service?.slice(0, 3).map(service => <Card key={service._id}
+                    service.slice(0, 3).map(service => <Card key={service._id}
                         service={service}
                     ></Card>)
 

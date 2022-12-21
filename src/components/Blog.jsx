@@ -6,7 +6,7 @@ const Blog = () => {
     return (
         <div className=' ' >
             <div className="dark:bg-gray-800 dark:text-gray-50 pt-7">
-                <div className="container grid grid-cols-12 mx-auto dark:bg-gray-900">
+                <div className="container grid grid-cols-12 mx-auto ">
 
                     <div className="flex flex-col p-6 col-span-full row-span-full lg:col-span-12 lg:p-10">
                         <h1 className="text-3xl font-semibold">🔰 Difference between SQL and NoSQL</h1>
@@ -18,7 +18,7 @@ const Blog = () => {
                         </div>
                     </div>
                 </div>
-                <div className="container grid grid-cols-12 mx-auto dark:bg-gray-900">
+                <div className="container grid grid-cols-12 mx-auto ">
 
                     <div className="flex flex-col p-6 col-span-full row-span-full lg:col-span-12 lg:p-10">
                         <h1 className="text-3xl font-semibold">🔰 What is JWT, and how does it work?</h1>
@@ -30,7 +30,7 @@ const Blog = () => {
                         </div>
                     </div>
                 </div>
-                <div className="container grid grid-cols-12 mx-auto dark:bg-gray-900">
+                <div className="container grid grid-cols-12 mx-auto ">
 
                     <div className="flex flex-col p-6 col-span-full row-span-full lg:col-span-12 lg:p-10">
                         <h1 className="text-3xl font-semibold">🔰 What is the difference between javascript and NodeJS?</h1>
@@ -42,7 +42,7 @@ const Blog = () => {
                         </div>
                     </div>
                 </div>
-                <div className="container grid grid-cols-12 mx-auto dark:bg-gray-900 pb-10">
+                <div className="container grid grid-cols-12 mx-auto  pb-10">
 
                     <div className="flex flex-col p-6 col-span-full row-span-full lg:col-span-12 lg:p-10">
                         <h1 className="text-3xl font-semibold">🔰 How does NodeJS handle multiple requests at the same time?</h1>

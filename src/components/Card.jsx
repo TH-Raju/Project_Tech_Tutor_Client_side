@@ -26,7 +26,7 @@ const Card = ({ service }) => {
                                 {price}
                             </p>
                         </div>
-                        <Link to={`/servicedetail/${_id}`}><button type="button" className="flex items-center hover:bg-sky-200 relative justify-center w-full p-3 font-semibold tracking-wide bg-blue-700 text-white rounded-md dark:bg-violet-400 dark:text-gray-900">Detail</button></Link>
+                        <Link to={`/servicedetail/${_id}`}><button type="button" className="flex items-center hover:bg-sky-200 relative justify-center w-full p-3 font-semibold tracking-wide  text-white rounded-md bg-cyan-700 ">Detail</button></Link>
                     </div>
                 </div>
             </PhotoProvider>

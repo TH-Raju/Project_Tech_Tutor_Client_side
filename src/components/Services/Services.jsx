@@ -13,8 +13,8 @@ const Services = () => {
             .then(data => setServices(data))
     }, [])
     return (
-        <div >
-            <div className='text-center'>
+        <div className='bg-gray-800 py-8'>
+            <div className='text-center mb-24 text-white '>
 
                 <h1 className='md:text-7xl sm:text-6xl text-4xl font-bold md:py-6'>
                     My Services
@@ -23,11 +23,11 @@ const Services = () => {
             </div>
             <div className=' grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 my-10'>
                 {
-                    services?.length === 0 ?
+                    services.length === 0 ?
                         <div ><SpinnerCircular /></div> : <SpinnerCircular enabled={false} />
                 }
                 {
-                    services?.map(service => <Card key={service._id}
+                    services.map(service => <Card key={service._id}
                         service={service}
                     ></Card>
                     )

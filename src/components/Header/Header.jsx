@@ -16,8 +16,8 @@ const Header = () => {
             .catch(error => setError(error))
     }
     return (
-        <div className='text-center'>
-            <nav className="flex items-center justify-between flex-wrap px-12 pt-4 bg-slate-600">
+        <div className='text-center '>
+            <nav className="flex items-center justify-between flex-wrap px-12 py-2 pt-4 bg-gray-900">
                 <div className="flex items-center flex-shrink-0 text-white mr-6">
                     <img src={logo} className=' h-12 w-12 mr-2' alt="" />
                     <span className="font-semibold text-xl tracking-tight">Tech Tutor</span>
@@ -28,7 +28,7 @@ const Header = () => {
                     </button>
                 </div>
                 <div className={`w-full ${open ? 'hidden' : 'block'} flex-grow lg:flex lg:items-center lg:w-auto`}>
-                    <div className="text-sm lg:flex-grow bg-none rounded-lg py-2">
+                    <div className="text-sm lg:flex-grow rounded-lg py-2">
 
                         {
                             user?.uid ?
