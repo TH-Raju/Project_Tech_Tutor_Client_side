@@ -16,7 +16,7 @@ const Header = () => {
             .catch(error => setError(error))
     }
     return (
-        <div className='text-center '>
+        <div className='sticky top-0 z-30 text-center'>
             <nav className="flex items-center justify-between flex-wrap px-12 py-2 pt-4 bg-gray-900">
                 <div className="flex items-center flex-shrink-0 text-white mr-6">
                     <img src={logo} className=' h-12 w-12 mr-2' alt="" />
@@ -42,6 +42,9 @@ const Header = () => {
                                     <Link to='/blog' className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4 text-lg">
                                         Blog
                                     </Link>
+                                    <Link to='/faq' className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4 text-lg">
+                                        FAQ
+                                    </Link>
                                     <Link to='/myreview' className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4 text-lg">
                                         My Review
                                     </Link>
@@ -59,6 +62,9 @@ const Header = () => {
                                     </Link>
                                     <Link to='/blog' className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4 text-lg">
                                         Blog
+                                    </Link>
+                                    <Link to='/faq' className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4 text-lg">
+                                        FAQ
                                     </Link>
                                 </>
                         }

@@ -1,5 +1,6 @@
 import React from 'react';
 import img from '../../img/tutor.png'
+import Choose from './Choose';
 import Review from './Review';
 
 const Summary = () => {
@@ -33,6 +34,7 @@ const Summary = () => {
                     </div>
                 </div>
             </section>
+            <Choose></Choose>
             <Review></Review>
 
             <div className='text-white'>

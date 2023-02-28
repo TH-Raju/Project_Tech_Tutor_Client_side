@@ -1,6 +1,7 @@
 import AddService from "../components/AddService";
 import Blog from "../components/Blog";
 import ErrorPage from "../components/ErrorPage";
+import Faq from "../components/Home/Faq";
 import Home from "../components/Home/Home";
 import Login from "../components/Login";
 import MyReview from "../components/MyReview";
@@ -29,6 +30,10 @@ export const router = createBrowserRouter([
             {
                 path: '/blog',
                 element: <Blog></Blog>
+            },
+            {
+                path: '/faq',
+                element: <Faq></Faq>
             },
             {
                 path: '/services',
