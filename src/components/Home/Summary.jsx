@@ -1,7 +1,10 @@
 import React from 'react';
 import img from '../../img/tutor.png'
+import Ban from './Ban';
 import Choose from './Choose';
+import Code from './Code';
 import Review from './Review';
+import Trust from './Trust';
 
 const Summary = () => {
     return (
@@ -36,34 +39,34 @@ const Summary = () => {
 
                 <div className="stats stats-vertical lg:stats-horizontal shadow text-center items-center">
 
-                    <div className="stat">
+                    <div className="stat p-8 hover:bg-primary hover:font-bold duration-300">
                         <div className="stat-title">Student's</div>
                         <div className="stat-value text-blue-600">50K</div>
                         <div className="stat-desc">2019 - 2023</div>
                     </div>
-                    <div className="stat">
+                    <div className="stat p-8 hover:bg-primary hover:font-bold  duration-300">
                         <div className="stat-title">Course</div>
                         <div className="stat-value">15+</div>
                         <div className="stat-desc">2019 - 2023</div>
                     </div>
-                    <div className="stat">
+                    <div className="stat p-8 hover:bg-primary hover:font-bold  duration-300">
                         <div className="stat-title">Downloads</div>
                         <div className="stat-value text-green-500">31K</div>
                         <div className="stat-desc">Jan 1st - Feb 1st</div>
                     </div>
-                    <div className="stat">
+                    <div className="stat p-8 hover:bg-primary hover:font-bold  duration-300">
                         <div className="stat-title">WorkShop</div>
                         <div className="stat-value">30+</div>
                         <div className="stat-desc">2022</div>
                     </div>
 
-                    <div className="stat">
+                    <div className="stat p-8 hover:bg-primary hover:font-bold  duration-300">
                         <div className="stat-title">New Users</div>
                         <div className="stat-value text-secondary">4,200</div>
                         <div className="stat-desc">↗︎ 400 (22%)</div>
                     </div>
 
-                    <div className="stat">
+                    <div className="stat p-8 hover:bg-primary hover:font-bold  duration-300">
                         <div className="stat-title">New Registers</div>
                         <div className="stat-value">1,200</div>
                         <div className="stat-desc">↘︎ 90 (14%)</div>
@@ -72,7 +75,10 @@ const Summary = () => {
                 </div>
             </section>
             <Choose></Choose>
+            <Ban></Ban>
+            <Code></Code>
             <Review></Review>
+            <Trust></Trust>
 
             <div className='text-white'>
                 <h1 className='bg-gray-800 underline text-white text-3xl text-center py-10 font-bold'>Contact With Me</h1>
