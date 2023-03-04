@@ -6,8 +6,8 @@ import Review from './Review';
 const Summary = () => {
     return (
         <div>
-            <section className="p-6 mb-28 dark:bg-gray-800 dark:text-gray-100">
-                <div className="container grid justify-center grid-cols-2 mx-auto text-center lg:grid-cols-3">
+            <section className="p-6 mb-28 dark:bg-gray-800 dark:text-gray-100 text-center">
+                {/* <div className="container grid justify-center grid-cols-2 mx-auto text-center lg:grid-cols-3">
                     <div className="flex flex-col justify-start m-2 lg:m-6 text-white">
                         <p className="text-4xl font-bold leading-none lg:text-6xl">50+</p>
                         <p className="text-sm sm:text-base">Clients</p>
@@ -32,6 +32,43 @@ const Summary = () => {
                         <p className="text-4xl font-bold leading-none lg:text-6xl">10+</p>
                         <p className="text-sm sm:text-base">Workshops</p>
                     </div>
+                </div> */}
+
+                <div className="stats stats-vertical lg:stats-horizontal shadow text-center items-center">
+
+                    <div className="stat">
+                        <div className="stat-title">Student's</div>
+                        <div className="stat-value text-blue-600">50K</div>
+                        <div className="stat-desc">2019 - 2023</div>
+                    </div>
+                    <div className="stat">
+                        <div className="stat-title">Course</div>
+                        <div className="stat-value">15+</div>
+                        <div className="stat-desc">2019 - 2023</div>
+                    </div>
+                    <div className="stat">
+                        <div className="stat-title">Downloads</div>
+                        <div className="stat-value text-green-500">31K</div>
+                        <div className="stat-desc">Jan 1st - Feb 1st</div>
+                    </div>
+                    <div className="stat">
+                        <div className="stat-title">WorkShop</div>
+                        <div className="stat-value">30+</div>
+                        <div className="stat-desc">2022</div>
+                    </div>
+
+                    <div className="stat">
+                        <div className="stat-title">New Users</div>
+                        <div className="stat-value text-secondary">4,200</div>
+                        <div className="stat-desc">↗︎ 400 (22%)</div>
+                    </div>
+
+                    <div className="stat">
+                        <div className="stat-title">New Registers</div>
+                        <div className="stat-value">1,200</div>
+                        <div className="stat-desc">↘︎ 90 (14%)</div>
+                    </div>
+
                 </div>
             </section>
             <Choose></Choose>
