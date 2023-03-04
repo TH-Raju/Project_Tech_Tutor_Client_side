@@ -41,7 +41,7 @@ const Review = () => {
                             </p>
                         </div>
                         <div className="flex flex-col items-center justify-center p-8 rounded-b-lg dark:bg-violet-400 dark:text-gray-900">
-                            <img src={require('../../img/pp.jpg')} alt="" className="w-16 h-16 mb-2 -mt-16 bg-center bg-cover rounded-full dark:bg-gray-500 dark:bg-gray-700" />
+                            <img src={require('../../img/pp.jpg')} alt="" className="w-16 h-16 mb-2 -mt-16 bg-center bg-cover rounded-full  dark:bg-gray-700" />
                             <p className="text-xl font-semibold leading-tight">TH Raju</p>
                             <p className="text-sm uppercase">Software Engineer</p>
                         </div>
@@ -62,7 +62,7 @@ const Review = () => {
                             </p>
                         </div>
                         <div className="flex flex-col items-center justify-center p-8 rounded-b-lg dark:bg-violet-400 dark:text-gray-900">
-                            <img src={require('../../img/student-3.png')} alt="" className="w-16 h-16 mb-2 -mt-16 bg-center bg-cover rounded-full dark:bg-gray-500 dark:bg-gray-700" />
+                            <img src={require('../../img/student-3.png')} alt="" className="w-16 h-16 mb-2 -mt-16 bg-center bg-cover rounded-full dark:bg-gray-700" />
                             <p className="text-xl font-semibold leading-tight">Distinctio Animi</p>
                             <p className="text-sm uppercase">Programmer</p>
                         </div>

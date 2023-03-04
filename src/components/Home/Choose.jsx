@@ -4,7 +4,7 @@ const Choose = () => {
     return (
         <div className='text-center mb-48'>
             <div>
-                <h2 className='text-3xl text-white'>Why Choose Us<span className='text-7xl font-extrabold'> ?</span></h2>
+                <h2 className='text-6xl text-white font-bold'>Why Choose Us<span className='text-7xl font-extrabold'> ?</span></h2>
             </div>
             <div className='flex flex-wrap justify-evenly items-center gap-10'>
                 <div>

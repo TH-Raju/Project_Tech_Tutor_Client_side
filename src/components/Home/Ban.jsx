@@ -16,6 +16,7 @@ const Ban = () => {
                         </div>
                         <Link to={"/services"} rel="noreferrer noopener" className="px-5 mt-4 lg:mt-0 py-3 rounded-md border block  text-white font-bold bg-cyan-700 dark:border-gray-400">Buy Now</Link>
                     </div>
+
                 </div>
             </div>
         </div>

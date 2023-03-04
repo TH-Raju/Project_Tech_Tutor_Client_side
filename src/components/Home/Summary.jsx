@@ -81,7 +81,7 @@ const Summary = () => {
             <Trust></Trust>
 
             <div className='text-white'>
-                <h1 className='bg-gray-800 underline text-white text-3xl text-center py-10 font-bold'>Contact With Me</h1>
+                <h1 className='bg-gray-800 text-white text-6xl text-center py-10 font-bold'>Contact With Us</h1>
                 <div className="grid w-full grid-cols-1 gap-8  py-16 mx-auto md:grid-cols-2 md:px-12  xl:px-32 pl-4 dark:bg-gray-800 dark:text-gray-100">
 
                     <div className="flex flex-col justify-between">
